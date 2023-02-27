@@ -20,5 +20,25 @@ public class InterpretDrawingFile {
 		File f = new File(chooser.getSelectedFile().getPath());
 		Scanner in = new Scanner(f); //making Scanner with a File
 		
+		String shapeType = in.next();
+		System.out.print(shapeType);
+		int redComponent = in.nextInt();
+		int greenComponent = in.nextInt();
+		int blueComponent = in.nextInt();
+		boolean isFilled = in.nextBoolean();
+		double paramaterOne = in.nextDouble();
+		double parameterTwo = in.nextDouble();
+		double parameterThree = in.nextDouble();
+		double parameterFour = in.nextDouble();
+		double parameterFive = in.nextDouble();
+		double parameterSix = in.nextDouble();
+		
+		StdDraw.setPenColor(redComponent, greenComponent, blueComponent);
+		double[] array_x = {paramaterOne, parameterTwo, parameterThree};
+		double[] array_y = {parameterFour, parameterFive, parameterSix};
+		StdDraw.filledPolygon(array_x, array_y); 
+		//StdDraw.polygon(paramaterOne, parameterTwo, parameterThree, parameterFour);
+		
 	}
+	
 }
